@@ -1,4 +1,13 @@
-variable "prefix" {}
+variable "resource_groups" {
+  type        = map(string)
+  description = "The resource groups to deploy"
+}
+
+variable "prefix" {
+  type        = string
+  description = "A prefix for all resources"
+  default     = "contoso"
+}
 
 variable "region" {
   type        = string
